@@ -22,9 +22,28 @@ SECRET=addrandomsecret
     /// checkback here later for routes
 ```
 
-## Routes
+## Endpoints
 
-### Authorization
+### Authorization Endpoints
+
+#### **POST /signup** - Creates a new user
+
+**Required Parameters:**
+
+>Request Body (JSON):
+>- username - _String_ (required)
+>- password - _String_ (required)
+>- email - _String_ (required)
+
+#### **POST /signup** - Allows an user to sign into their account
+
+**Required Parameters:**
+
+>Request Body (JSON):
+>- username - _String_
+>- password - _String_
+
+---
 
 ### Projects
 
