@@ -10,7 +10,9 @@ Simple backend application for a project manangment app
 
 ### ENV requirements
 
+```js
 SECRET=addrandomsecret
+```
 
 ## How To Run
 
