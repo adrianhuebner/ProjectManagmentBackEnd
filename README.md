@@ -12,6 +12,12 @@ Simple backend application for a project manangment app
 
 ## How To Run
 
+### How to use HTTP Pie in the Terminal to Run Routes
+
+``` js
+    /// checkback here later for routes
+```
+
 ## Routes
 
 ### Authorization
