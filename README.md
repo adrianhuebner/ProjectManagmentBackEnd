@@ -10,6 +10,8 @@ Simple backend application for a project manangment app
 
 ### ENV requirements
 
+SECRET=addrandomsecret
+
 ## How To Run
 
 ### How to use HTTP Pie in the Terminal to Run Routes
