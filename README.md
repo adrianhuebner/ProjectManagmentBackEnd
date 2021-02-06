@@ -1,6 +1,8 @@
 # ProjectManagmentBackEnd
 
-Simple backend application for a project manangment app  
+[![npm version](https://badge.fury.io/js/survey-monkey-streams.svg)](//npmjs.com/ProjectManagementBackEnd)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 
 **Author:** Adrian Huebner  
 **Deployed Backend Link:** *Check back later for this*  
