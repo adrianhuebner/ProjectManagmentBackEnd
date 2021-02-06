@@ -18,8 +18,18 @@ SECRET=addrandomsecret
 
 ### How to use HTTP Pie in the Terminal to Run Routes
 
+#### Authorization Enpoints
+
 ``` js
-    /// checkback here later for routes
+    http POST :3000/signup username=<add username here> password=<add password here>
+```
+
+---
+
+#### Project Endpoints
+
+```js
+    // checkback later for this
 ```
 
 ## Endpoints
@@ -33,7 +43,6 @@ SECRET=addrandomsecret
 >Request Body (JSON):
 >- username - _String_ (required)
 >- password - _String_ (required)
->- email - _String_ (required)
 
 #### **POST /signup** - Allows an user to sign into their account
 
@@ -52,5 +61,7 @@ SECRET=addrandomsecret
 ## Data Model
 
 ![DataModel](./assets/DataModel.png)
+
+## UML (Unified Modeling Language)
 
 ## Sources
