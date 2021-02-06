@@ -1,8 +1,12 @@
 # ProjectManagmentBackEnd
 
-Simple backend application for a project manangment app  
+[![npm version](https://badge.fury.io/js/survey-monkey-streams.svg)](//npmjs.com/ProjectManagementBackEnd)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-**Author:** Adrian Huebner  
+This is a backend server for a project management application. User's will be able to sign up for an account, add projects that they are currently working on with added notes about the project.
+
+## **Author:** Adrian Huebner [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrianhuebner/)
+
 **Deployed Backend Link:** *Check back later for this*  
 **Frontend Code Repository:** *Check back later for this*
 
@@ -18,8 +22,18 @@ SECRET=addrandomsecret
 
 ### How to use HTTP Pie in the Terminal to Run Routes
 
+#### Authorization Enpoints
+
 ``` js
-    /// checkback here later for routes
+    http POST :3000/signup username=<add username here> password=<add password here>
+```
+
+---
+
+#### Project Endpoints
+
+```js
+    // checkback later for this
 ```
 
 ## Endpoints
@@ -33,7 +47,6 @@ SECRET=addrandomsecret
 >Request Body (JSON):
 >- username - _String_ (required)
 >- password - _String_ (required)
->- email - _String_ (required)
 
 #### **POST /signup** - Allows an user to sign into their account
 
@@ -53,4 +66,8 @@ SECRET=addrandomsecret
 
 ![DataModel](./assets/DataModel.png)
 
+## UML (Unified Modeling Language)
+
 ## Sources
+
+[Alexandre Sanlim's README on Badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)

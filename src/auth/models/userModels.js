@@ -9,7 +9,6 @@ const SECRET = process.env.SECRET;
 const users = new Schema({
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true},
-  email: {type: String, required: true}
 })
 
 users.pre('save', async function(){

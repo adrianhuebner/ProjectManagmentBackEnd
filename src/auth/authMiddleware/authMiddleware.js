@@ -2,7 +2,7 @@
 
 const User = require('../models/userModels.js');
 
-module.export = (request, response, next) => {
+module.exports = (request, response, next) => {
 
   try{
     let [authType, encodedString] = request.headers.authorization.split(/\s+/);
