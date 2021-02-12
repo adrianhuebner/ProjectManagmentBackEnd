@@ -8,6 +8,7 @@ const morgan = require ('morgan');
 // Esoteric Resources
 const errorHandler = require('./middleware/500.js')
 const pageNotFound = require('./middleware/404.js');
+const authRoutes = require('./auth/authRoutes.js')
 
 // Prepare the app
 const app = express();
@@ -20,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 // Routes
-
+app.use(authRoutes);
 
 // Catch Alls
 app.use(pageNotFound);
