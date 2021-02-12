@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
 userSchema.path('email').validate(async(email) => {
   const checkingEmail = await mongoose.models.users.countDocuments({ email })
   return !checkingEmail
-}, 'This email has already been used')
+}, 'This email has already been used');
 
 /**
  * Hashing the password that the user is entering
@@ -33,9 +33,9 @@ userSchema.path('email').validate(async(email) => {
 userSchema.pre('save', async function(){
   console.log('About to save the user in the database');
   if(this.isModified('password')){
-    this.password = await bcrypt.hash(this.password, 10)
-  }
-})
+    this.password = await bcrypt.hash(this.password, 10);
+  };
+});
 
 /**
  * Basic authentification function
@@ -43,8 +43,8 @@ userSchema.pre('save', async function(){
 userSchema.statics.authenticateBasic = function(auth){
   let query = {username: auth.username};
   return this.findOne(query)
-    .then(user => user.comparePassword(auth.password))
-}
+    .then(user => user.comparePassword(auth.password));
+};
 
 /**
  * Compare plain text password against the hashed password that is saved
@@ -52,6 +52,16 @@ userSchema.statics.authenticateBasic = function(auth){
 userSchema.methods.comparePassword = function(password){
   return bcrypt.compare(password, this.password)
     .then(isValid => isValid ? this: null);
+};
+
+/**
+ * Generate a jsonwebtoken from the user id and the secret that is in the .env
+ */
+userSchema.methods.generateToken = function(){
+  let tokenData = {
+    id:this._id
+  };
+  return jwt.sign(tokenData, process.env.SECRET || 'extrasecretherekustincase');
 };
 
 const User = mongoose.model('users', userSchema)
