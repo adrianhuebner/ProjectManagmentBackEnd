@@ -1,6 +1,5 @@
 # ProjectManagmentBackEnd
 
-
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 This is a backend server for a project management application. User's will be able to sign up for an account, add projects that they are currently working on with added notes about the project.

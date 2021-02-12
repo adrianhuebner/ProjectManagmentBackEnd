@@ -38,8 +38,14 @@ userSchema.pre('save', async function(){
 })
 
 /**
- * 
+ * Basic authentification function
  */
+userSchema.statics.authenticateBasic = function(auth){
+  let query = {username: auth.username};
+  return this.findOne(query)
+    .then(user => user.comparePassword(auth.password))
+}
+
 
 const User = mongoose.model('users', userSchema)
 module.exports = User
