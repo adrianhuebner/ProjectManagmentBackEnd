@@ -46,6 +46,13 @@ userSchema.statics.authenticateBasic = function(auth){
     .then(user => user.comparePassword(auth.password))
 }
 
+/**
+ * Compare plain text password against the hashed password that is saved
+ */
+userSchema.methods.comparePassword = function(password){
+  return bcrypt.compare(password, this.password)
+    .then(isValid => isValid ? this: null);
+};
 
 const User = mongoose.model('users', userSchema)
 module.exports = User
