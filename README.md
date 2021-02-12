@@ -15,22 +15,24 @@ This is a backend server for a project management application. User's will be ab
 ### ENV requirements
 
 ```js
-SECRET=addrandomsecret
+PORT=add port number here  
+SECRET=addrandomsecret  
+MONGODB_URI=link to mongo database here
 ```
 
 ## How To Run
 
 ### How to use HTTP Pie in the Terminal to Run Routes
 
-#### Authorization Enpoints
+#### Authorization Routes
 
 ``` js
-    http POST :3000/signup username=<add username here> password=<add password here>
+    http POST :3000/signup email=<add email here> username=<add username here> password=<add password here>
 ```
 
 ---
 
-#### Project Endpoints
+#### Project Routes
 
 ```js
     // checkback later for this
@@ -45,6 +47,7 @@ SECRET=addrandomsecret
 **Required Parameters:**
 
 >Request Body (JSON):
+>- email - _String_ (required)
 >- username - _String_ (required)
 >- password - _String_ (required)
 
@@ -58,7 +61,7 @@ SECRET=addrandomsecret
 
 ---
 
-### Projects
+### Project Endpoints
 
 ## Testing
 
@@ -66,8 +69,8 @@ SECRET=addrandomsecret
 
 ![DataModel](./assets/DataModel.png)
 
-## UML (Unified Modeling Language)
-
 ## Sources
 
-[Alexandre Sanlim's README on Badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)
+[Alexandre Sanlim's README on Badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)  
+[YouTube Video: How to Add Reset Password](https://www.youtube.com/watch?v=lLVmH6SB2Z4)  
+[Joi Documentation](https://joi.dev/)
