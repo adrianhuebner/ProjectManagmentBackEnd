@@ -72,4 +72,5 @@ MONGODB_URI=link to mongo database here
 ## Sources
 
 [Alexandre Sanlim's README on Badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)  
-[YouTube Video: How to Add Reset Password](https://www.youtube.com/watch?v=lLVmH6SB2Z4)
+[YouTube Video: How to Add Reset Password](https://www.youtube.com/watch?v=lLVmH6SB2Z4)  
+[Joi Documentation](https://joi.dev/)
