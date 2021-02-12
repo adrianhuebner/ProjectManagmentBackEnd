@@ -1,8 +1,12 @@
 # ProjectManagmentBackEnd
 
-Simple backend application for a project manangment app  
+[![npm version](https://badge.fury.io/js/survey-monkey-streams.svg)](//npmjs.com/ProjectManagementBackEnd)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-**Author:** Adrian Huebner  
+This is a backend server for a project management application. User's will be able to sign up for an account, add projects that they are currently working on with added notes about the project.
+
+## **Author:** Adrian Huebner [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrianhuebner/)
+
 **Deployed Backend Link:** *Check back later for this*  
 **Frontend Code Repository:** *Check back later for this*
 
@@ -10,19 +14,54 @@ Simple backend application for a project manangment app
 
 ### ENV requirements
 
+```js
+PORT=add port number here  
+SECRET=addrandomsecret  
+MONGODB_URI=link to mongo database here
+```
+
 ## How To Run
 
 ### How to use HTTP Pie in the Terminal to Run Routes
 
+#### Authorization Routes
+
 ``` js
-    /// checkback here later for routes
+    http POST :3000/signup email=<add email here> username=<add username here> password=<add password here>
 ```
 
-## Routes
+---
 
-### Authorization
+#### Project Routes
 
-### Projects
+```js
+    // checkback later for this
+```
+
+## Endpoints
+
+### Authorization Endpoints
+
+#### **POST /signup** - Creates a new user
+
+**Required Parameters:**
+
+>Request Body (JSON):
+>- email - _String_ (required)
+>- username - _String_ (required)
+>- password - _String_ (required)
+
+#### **POST /signup** - Allows an user to sign into their account
+
+**Required Parameters:**
+
+>Request Body (JSON):
+>- username - _String_
+>- password - _String_
+
+---
+
+### Project Endpoints
 
 ## Testing
 
@@ -31,3 +70,7 @@ Simple backend application for a project manangment app
 ![DataModel](./assets/DataModel.png)
 
 ## Sources
+
+[Alexandre Sanlim's README on Badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)  
+[YouTube Video: How to Add Reset Password](https://www.youtube.com/watch?v=lLVmH6SB2Z4)  
+[Joi Documentation](https://joi.dev/)
