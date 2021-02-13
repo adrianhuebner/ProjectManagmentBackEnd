@@ -2,7 +2,7 @@
 
 const Joi = require('joi');
 
-const userValidation = Joi.object({
+const newUserValidation = Joi.object({
   email: Joi.string()
     .email()
     .lowercase()
@@ -17,6 +17,15 @@ const userValidation = Joi.object({
   RegExp = password is required to have: lowercase: [a-z], uppercase: [A-Z], number: [0-9], special characters allowed: [#,$,%,^,&,*] and a minimum of 6 and a maximum of 20
 */
 
+const loginValidation = Joi.object({
+  username: Joi.string()
+    .required(),
+  password: Joi.string()
+  .pattern(new RegExp('^[a-zA-Z0-9#$%^&*]{6,20}$'))
+  .required()
+})
+
 module.exports = {
-  userValidation
+  newUserValidation,
+  loginValidation
 }
