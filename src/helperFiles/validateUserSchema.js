@@ -2,13 +2,15 @@
 
 const Joi = require('joi');
 
-const userSchema = Joi.object({
+const userValidation = Joi.object({
   email: Joi.string()
     .email()
     .lowercase()
     .required(),
+  username: Joi.string()
+    .required(),
   password: Joi.string()
-    .pattern(new RegExp['^[a-zA-Z0-9#$%^&*]{6,20}$'])
+    .pattern(new RegExp('^[a-zA-Z0-9#$%^&*]{6,20}$'))
     .required()
 })
 /*
@@ -16,5 +18,5 @@ const userSchema = Joi.object({
 */
 
 module.exports = {
-  userSchema
+  userValidation
 }
