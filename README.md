@@ -13,6 +13,12 @@ This is a backend server for a project management application. User's will be ab
 
 ### ENV requirements
 
+**Generating secret keys from helper file:**  
+>-Once the project is cloned and installed onto your local machine:  
+  >- Run this in your terminal: `nodemon ./src/helperFiles/keyGenerators.js`
+
+---
+
 ```js
 PORT=add port number here  
 SECRET=addrandomsecret  

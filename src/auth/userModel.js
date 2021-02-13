@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique: true
   },
   username: {
     type: String,
@@ -55,15 +56,6 @@ userSchema.methods.comparePassword = function(password){
     .then(isValid => isValid ? this: null);
 };
 
-/**
- * Generate a jsonwebtoken from the user id and the secret that is in the .env
- */
-userSchema.methods.generateToken = function(){
-  let tokenData = {
-    id:this._id
-  };
-  return jwt.sign(tokenData, process.env.SECRET || 'extrasecretherekustincase');
-};
 
 const User = mongoose.model('users', userSchema)
 module.exports = User
