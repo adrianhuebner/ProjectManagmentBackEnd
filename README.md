@@ -13,6 +13,12 @@ This is a backend server for a project management application. User's will be ab
 
 ### ENV requirements
 
+**Generating secret keys from helper file:**  
+>-Once the project is cloned and installed onto your local machine:  
+  >- Run this in your terminal: `nodemon ./src/helperFiles/keyGenerators.js`
+
+---
+
 ```js
 PORT=add port number here  
 SECRET=addrandomsecret  
@@ -26,7 +32,8 @@ MONGODB_URI=link to mongo database here
 #### Authorization Routes
 
 ``` js
-    http POST :3000/signup email=<add email here> username=<add username here> password=<add password here>
+    http POST :3000/signup email=<add email here> username=<add username here> password=<add password here>  
+    http POST :3000/login username=<created username here> password=<password created here>
 ```
 
 ---
@@ -72,5 +79,5 @@ MONGODB_URI=link to mongo database here
 
 [Alexandre Sanlim's README on Badges](https://github.com/alexandresanlim/Badges4-README.md-Profile)  
 [YouTube Video: How to Add Reset Password](https://www.youtube.com/watch?v=lLVmH6SB2Z4)  
-[Joi Documentation](https://joi.dev/)
+[Joi Documentation](https://joi.dev/)  
 [Joi Implemenation Video](https://www.youtube.com/watch?v=u9kxYilQ9l8&t=381s)
