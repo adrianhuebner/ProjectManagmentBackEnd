@@ -3,6 +3,10 @@
 const mongoose = require('mongoose');
 
 const projectModel = new mongoose.Schema({
+  creator: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }],
   category: {
     type: String,
     required: true,
