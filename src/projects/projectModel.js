@@ -7,6 +7,14 @@ const projectModel = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   }],
+  projectName: {
+    type: String,
+    required: true
+  },
+  projectDescription: {
+    type: String,
+    default: 'new project'
+  },
   category: {
     type: String,
     required: true,
@@ -20,9 +28,9 @@ const projectModel = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  projectDescription: {
-    type: String,
-    default: 'new project'
+  finished: {
+    type: Boolean,
+    default: false
   },
   notes: [String]
 })
