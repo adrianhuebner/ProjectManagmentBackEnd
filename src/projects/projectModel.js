@@ -13,7 +13,8 @@ const projectModel = new mongoose.Schema({
     default: Date.now
   },
   dateFinished: {
-    type: Date
+    type: Date,
+    default: Date.now
   },
   projectDescription: {
     type: String,
@@ -21,3 +22,6 @@ const projectModel = new mongoose.Schema({
   },
   notes: [String]
 })
+
+const Project = mongoose.model('projects', projectModel);
+module.exports = Project;
