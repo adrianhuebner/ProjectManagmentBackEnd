@@ -28,8 +28,13 @@ describe('Testing all my user routes', () => {
         });
     });
 
-    // it('An user should be able to sign into their account', () => {
-
-    // });
+    it('An user should be able to sign into their account', (done) => {
+      return request.post('./login')
+        .auth('TestingUser', 'TestingStuff102') 
+        .then(response => {
+          expect(response.status).toBe(200);
+          done();
+        });
+    });
   });
 });
