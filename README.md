@@ -7,9 +7,19 @@ This is a backend server for a project management application. User's will be ab
 ## **Author:** Adrian Huebner [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrianhuebner/)
 
 **Deployed Backend Link:** *Check back later for this*  
-**Frontend Code Repository:** *Check back later for this*
+**Frontend Code Repository:** [Repo](https://github.com/adrianhuebner/projecthub.git)
 
 ## Setup On Your Machine
+
+### Initial Setup on Machine
+
+1. Above the list of files on repositories main page, click on the Code button
+2. Under the clone with HTTPS click the button that looks like a click board
+3. Open your computers terminal
+4. Change the directory that you are in, to the one that you want the repository to live
+5. type `git clone` into your terminal and then paste the link to the repository after
+6. Press **Enter** on your machine and let it do all the work it needs
+7. Run `cd <project name>` in your terminal and run `npm i` to install all the dependencies the project requires
 
 ### ENV requirements
 
