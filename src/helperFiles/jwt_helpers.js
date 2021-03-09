@@ -17,7 +17,7 @@ module.exports = {
         resolve(token)
       })
     })
-  }
+  },
 
   
 }
