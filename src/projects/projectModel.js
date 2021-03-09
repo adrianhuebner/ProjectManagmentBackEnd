@@ -11,5 +11,13 @@ const projectModel = new mongoose.Schema({
   dateStarted: {
     type: Date,
     default: Date.now
-  }
+  },
+  dateFinished: {
+    type: Date
+  },
+  projectDescription: {
+    type: String,
+    default: 'new project'
+  },
+  notes: [String]
 })
