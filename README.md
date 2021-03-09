@@ -81,6 +81,13 @@ MONGODB_URI=link to mongo database here
 
 ## Testing
 
+Run the following: `npm test`
+
+- This will run all the tests in the test folder
+- To get only user tests run `npm test userModel.test.js`
+
+***Will get user and project routes all testing at 100%***
+
 ## Data Model
 
 ![DataModel](./assets/DataModel.png)
