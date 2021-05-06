@@ -17,6 +17,12 @@ describe('Testing all my user routes', () => {
                         username: 'TestingUser',
                         password: 'TestingStuff102'
                       };
+
+  const badEmailUser = {
+                        email: 'testingattesting.com',
+                        username: 'GotBadEmail',
+                        password: 'TestingBadEmail1'
+                      }
   
   describe('Authentication routes', () => {
     it('An user should be able to create an account', (done) => {
@@ -29,12 +35,29 @@ describe('Testing all my user routes', () => {
     });
 
     it('An user should be able to sign into their account', (done) => {
-      return request.post('./login')
-        .auth('TestingUser', 'TestingStuff102') 
+      return request.post('/login')
+        .send('TestingUser', 'TestingStuff102') 
         .then(response => {
           expect(response.status).toBe(200);
           done();
         });
+    });
+
+    it('User should receive an error if they don\'t enter a proper email', (done) => {
+      return request.post('/signup')
+        .send(badEmailUser)
+        .then(response => {
+          expect(response.status).toBe(500);
+          done();
+        });
+    });
+
+    it('User will recieve a 404 when typing link in wrong', (done) => {
+      return request.post('/badroute')
+        .then(response => {
+          expect(response.status).toBe(404);
+          done();
+        })
     });
   });
 });
