@@ -7,7 +7,7 @@
     "start": "node index.js",
     "lint": "eslint **/*.js",
     "test": "jest --coverage",
-    "test-watch": "jest --watchAll --coverage"
+    "test-watch": "jest --watchAll --coverage --testEnvironment=node"
   },
   "repository": {
     "type": "git",
